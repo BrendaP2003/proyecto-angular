@@ -1,0 +1,29 @@
+
+<header class="brand-name">
+  
+  <div class="brand">
+  
+  <nav>
+
+        @for (item of menu; track item.ruta) {
+
+        <a [routerLink]="item.ruta">
+
+            <img
+            class="brand-logo"
+            [src]="item.icono"
+            [alt]="item.nombre"
+            />
+
+            <span>
+            {{ item.nombre }}
+            </span>
+
+        </a>
+
+        }
+
+    </nav>
+  </div>
+
+</header>
