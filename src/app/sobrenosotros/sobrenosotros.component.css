@@ -1,0 +1,32 @@
+.mision-vision {
+  width: 100%;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.mision-vision h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
+/* Contenedor de las tarjetas */
+.mision-vision-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;                    /* Activa CSS Grid */
+  grid-template-columns: 1fr 1fr;  /* Crea 2 columnas iguales */
+  gap: 30px;                        /* Espacio entre las tarjetas */
+}
+
+
+/* En celular */
+@media (max-width: 768px) {
+
+  .mision-vision-container {
+    grid-template-columns: 1fr;     /* Una sola columna */
+  }
+
+}

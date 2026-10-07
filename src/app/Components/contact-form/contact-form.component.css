@@ -1,0 +1,356 @@
+/* =====================================================
+   FORMULARIO PRINCIPAL
+   ===================================================== */
+
+.contact-form {
+
+  /* El formulario ocupa todo el ancho disponible */
+  width: 100%;
+
+  /* Evita que el formulario sea demasiado grande */
+  max-width: 900px;
+
+  /* Centra el formulario horizontalmente */
+  margin: 0 auto;
+
+  /* Espacio interno del formulario */
+  padding: 45px;
+
+  /* Hace que el padding no aumente el ancho total */
+  box-sizing: border-box;
+
+  /* Fondo blanco */
+  background-color: #ffffff;
+
+  /* Esquinas redondeadas */
+  border-radius: 18px;
+
+  /* Sombra suave */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+
+
+  /* =================================================
+     GRID
+     ================================================= */
+
+  /* Convierte el formulario en una cuadrícula */
+  display: grid;
+
+  /* Crea 3 columnas del mismo tamaño */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Espacio entre las columnas y filas */
+  gap: 20px;
+}
+
+
+
+
+/* =====================================================
+   GRUPOS DEL FORMULARIO
+   ===================================================== */
+
+.form-group {
+
+  /* Coloca label e input uno debajo del otro */
+  display: flex;
+
+  /* Dirección vertical */
+  flex-direction: column;
+
+  /* No necesitamos margen porque usamos gap */
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   ETIQUETAS
+   ===================================================== */
+
+.form-group label {
+
+  /* Espacio debajo de la etiqueta */
+  margin-bottom: 8px;
+
+  /* Tamaño de letra */
+  font-size: 15px;
+
+  /* Hace la etiqueta un poco más gruesa */
+  font-weight: 600;
+
+  /* Color del texto */
+  color: #222222;
+}
+
+
+/* =====================================================
+   INPUTS Y TEXTAREA
+   ===================================================== */
+
+.form-group input,
+.form-group textarea {
+
+  /* Ocupan todo el ancho disponible */
+  width: 100%;
+
+  /* Espacio interno */
+  padding: 14px 16px;
+
+  /* Evita problemas con el ancho */
+  box-sizing: border-box;
+
+  /* Borde */
+  border: 1px solid #dddddd;
+
+  /* Esquinas redondeadas */
+  border-radius: 10px;
+
+  /* Tamaño del texto */
+  font-size: 16px;
+
+  /* Color del texto */
+  color: #222222;
+
+  /* Fondo ligeramente gris */
+  background-color: #fafafa;
+
+  /* Animación cuando recibe el foco */
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO CUANDO SE SELECCIONA UN INPUT
+   ===================================================== */
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+  /* Quita el borde azul predeterminado del navegador */
+  outline: none;
+
+  /* Cambia el color del borde */
+  border-color: #111111;
+
+  /* Cambia el fondo a blanco */
+  background-color: #ffffff;
+
+  /* Agrega una sombra alrededor */
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =====================================================
+   PLACEHOLDER
+   ===================================================== */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+
+  /* Color del texto de ejemplo */
+  color: #999999;
+}
+
+
+/* =====================================================
+   MENSAJE
+   ===================================================== */
+
+/*
+   El cuarto elemento del formulario es el textarea.
+   Lo hacemos ocupar las 3 columnas.
+*/
+
+.form-group:nth-child(4) {
+
+  /* Empieza en la primera columna
+     y termina después de la última */
+  grid-column: 1 / -1;
+}
+
+
+/* =====================================================
+   TEXTAREA
+   ===================================================== */
+
+.form-group textarea {
+
+  /* Permite cambiar verticalmente su tamaño */
+  resize: vertical;
+
+  /* Altura mínima */
+  min-height: 150px;
+}
+
+
+/* =====================================================
+   AVISO DE PRIVACIDAD
+   ===================================================== */
+
+.form-privacy {
+
+  /* Ocupa las 3 columnas */
+  grid-column: 1 / -1;
+
+  /* Coloca checkbox y texto en horizontal */
+  display: flex;
+
+  /* Centra verticalmente */
+  align-items: center;
+
+  /* Espacio entre checkbox y texto */
+  gap: 10px;
+}
+
+
+/* Checkbox */
+
+.form-privacy input {
+
+  /* Ancho del checkbox */
+  width: 17px;
+
+  /* Alto del checkbox */
+  height: 17px;
+
+  /* Evita que se reduzca */
+  flex-shrink: 0;
+
+  /* Cambia el cursor */
+  cursor: pointer;
+}
+
+
+/* Texto del aviso */
+
+.form-privacy label {
+
+  /* Tamaño de letra */
+  font-size: 14px;
+
+  /* Color */
+  color: #666666;
+
+  /* Hace que también pueda seleccionarse haciendo clic */
+  cursor: pointer;
+}
+
+
+/* =====================================================
+   BOTÓN
+   ===================================================== */
+
+.contact-form button {
+
+  /* Ocupa las 3 columnas */
+  grid-column: 1 / -1;
+
+  /* Ocupa todo el ancho */
+  width: 100%;
+
+  /* Espacio interno */
+  padding: 15px 25px;
+
+  /* Quita el borde */
+  border: none;
+
+  /* Esquinas redondeadas */
+  border-radius: 10px;
+
+  /* Tamaño del texto */
+  font-size: 16px;
+
+  /* Grosor del texto */
+  font-weight: 600;
+
+  /* Cambia el cursor */
+  cursor: pointer;
+
+  /* Fondo */
+  background-color: #111111;
+
+  /* Texto blanco */
+  color: #ffffff;
+
+  /* Animación */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO DEL BOTÓN
+   ===================================================== */
+
+.contact-form button:hover {
+
+  /* Sube ligeramente el botón */
+  transform: translateY(-2px);
+
+  /* Agrega sombra */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+/*
+   Cuando la pantalla sea menor a 768px,
+   cambiamos de 3 columnas a 1 columna.
+*/
+
+@media (max-width: 768px) {
+
+  .contact-form {
+
+    /* Una sola columna */
+    grid-template-columns: 1fr;
+
+    /* Menos espacio interno */
+    padding: 30px 20px;
+
+    /* Deja un pequeño margen a los lados */
+    width: 94%;
+  }
+
+
+  /*
+     Todos los campos ocupan toda la fila.
+  */
+
+  .form-group:nth-child(1),
+  .form-group:nth-child(2),
+  .form-group:nth-child(3),
+  .form-group:nth-child(4) {
+
+    /* Ocupa toda la columna */
+    grid-column: 1 / -1;
+
+    /* Ancho completo */
+    width: 100%;
+  }
+
+
+  /* Aviso de privacidad */
+
+  .form-privacy {
+
+    /* Ocupa toda la columna */
+    grid-column: 1 / -1;
+  }
+
+
+  /* Botón */
+
+  .contact-form button {
+
+    /* Ocupa toda la columna */
+    grid-column: 1 / -1;
+  }
+}

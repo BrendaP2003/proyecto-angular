@@ -1,0 +1,195 @@
+/* .promo-card {
+  display: flex;
+  width: 100%;
+  min-height: 400px;
+}
+
+.promo-card img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.promo-info {
+  width: 50%;
+  padding: 50px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+ /* =====================================================
+   TARJETA DE PROMOCIÓN
+   ===================================================== */
+
+.promo-card {
+  /* Imagen y contenido uno al lado del otro */
+  display: flex;
+
+  /* Ocupa todo el ancho */
+  width: 100%;
+
+  /* Altura de la tarjeta */
+  min-height: 400px;
+
+  /* Evita que el contenido se salga */
+  overflow: hidden;
+
+  /* Fondo */
+  background-color: white;
+
+  /* Esquinas redondeadas */
+  border-radius: 15px;
+
+  /* Sombra */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================================
+   IMAGEN DE LA TARJETA
+   ===================================================== */
+
+.promo-card img {
+  /* La imagen ocupa la mitad de la tarjeta */
+  width: 50%;
+
+  /* Ocupa toda la altura disponible */
+  height: 400px;
+
+  /* Muestra la imagen COMPLETA sin recortarla */
+  object-fit: contain;
+
+  /* Deja un poco de espacio alrededor de la imagen */
+  padding: 20px;
+
+  /* Evita que el padding aumente el tamaño total */
+  box-sizing: border-box;
+
+  /* Permite que la imagen tenga profundidad 3D */
+  transform-style: preserve-3d;
+
+  /* Hace que la imagen gire continuamente */
+  animation: girarImagen 6s linear infinite;
+}
+
+
+/* =====================================================
+   ROTACIÓN 3D
+   ===================================================== */
+
+@keyframes girarImagen {
+
+  /* Comienza de frente */
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  /* Da la vuelta rápidamente */
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  /* Regresa a la posición frontal */
+  100% {
+    transform: rotateY(360deg);
+  }
+
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+.promo-info {
+  /* Ocupa la otra mitad de la tarjeta */
+  width: 50%;
+
+  /* Espacio interno */
+  padding: 50px;
+
+  /* Incluye el padding dentro del ancho */
+  box-sizing: border-box;
+
+  /* Activa Flexbox */
+  display: flex;
+
+  /* Coloca título, texto y botón verticalmente */
+  flex-direction: column;
+
+  /* Centra el contenido verticalmente */
+  justify-content: center;
+
+  /* Centra el texto */
+  text-align: center;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.promo-info h2 {
+  /* Elimina el margen superior */
+  margin-top: 0;
+
+  /* Tamaño del título */
+  font-size: 32px;
+
+  /* Grosor de la letra */
+  font-weight: bold;
+}
+
+
+/* =====================================================
+   TEXTO
+   ===================================================== */
+
+.promo-info p {
+  /* Espacio debajo del texto */
+  margin-bottom: 30px;
+
+  /* Tamaño de la letra */
+  font-size: 18px;
+
+  /* Espacio entre líneas */
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   BOTÓN
+   ===================================================== */
+
+.promo-info button {
+  /* Espacio interno del botón */
+  padding: 14px 25px;
+
+  /* Elimina el borde */
+  border: none;
+
+  /* Redondea las esquinas */
+  border-radius: 8px;
+
+  /* Cambia el cursor */
+  cursor: pointer;
+
+  /* Tamaño del texto */
+  font-size: 16px;
+
+  /* Hace la letra más gruesa */
+  font-weight: bold;
+
+  /* Hace suave el cambio al pasar el mouse */
+  transition: transform 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO DEL BOTÓN
+   ===================================================== */
+
+.promo-info button:hover {
+  /* Hace que el botón crezca ligeramente */
+  transform: scale(1.05);
+}

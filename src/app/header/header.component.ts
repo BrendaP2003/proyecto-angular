@@ -16,15 +16,20 @@ export class HeaderComponent {
       icono: '/access/icons.svg',
       ruta: '/'
     },
-    {
-      nombre: 'Contacto',
+       {
+      nombre: 'Menú',
       icono: '/access/icono2.svg',
-      ruta: '/contacto'
+      ruta: '/menu'
     },
     {
-      nombre: 'Empleados',
+      nombre: 'Sobre Nosotros',
+      icono: '/access/icono2.svg',
+      ruta: '/sobrenosotros'
+    },
+    {
+      nombre: 'Contactanos',
       icono: '/access/icono3.svg',
-      ruta: '/empleados'
+      ruta: '/contactanos'
     }
   ];
 

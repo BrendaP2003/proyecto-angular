@@ -1,3 +1,7 @@
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
 .brand-name {
   display: flex;
   align-items: center;
@@ -10,33 +14,132 @@
   box-shadow: 0 2px 8px rgba(110, 2, 251, 0.2);
 }
 
+
+/* Contenedor de la marca */
 .brand {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+
+/* Logo */
 .brand-logo {
   width: 40px;
   height: 40px;
 }
 
-.brand h1 {
-  margin: 0;
-}
+
+/* ============================= */
+/* NAVEGACIÓN */
+/* ============================= */
 
 nav {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-nav a {
+
+/* ============================= */
+/* ENLACES PRINCIPALES */
+/* ============================= */
+
+nav > a,
+.menu-dropdown > a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
   text-decoration: none;
-  color: #fdfbfb;
+
+  color: #ffffff;
+
   font-weight: bold;
 }
 
-nav a:hover {
+
+/* Hover de los enlaces principales */
+nav > a:hover,
+.menu-dropdown > a:hover {
   color: #605DC8;
 }
 
+
+/* ============================= */
+/* MENÚ DESPLEGABLE */
+/* ============================= */
+
+/*
+   Este es el contenedor de
+   "Menú + Sushi + Comida China"
+*/
+.menu-dropdown {
+  position: relative;
+}
+
+
+/*
+   Submenú
+
+   Inicialmente está oculto.
+*/
+.menu-dropdown .submenu {
+  display: none;
+
+  position: absolute;
+
+  top: 100%;
+  left: 0;
+
+  width: 180px;
+
+  padding: 8px 0;
+
+  background-color: #ffffff;
+
+  border-radius: 8px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+
+  z-index: 9999;
+}
+
+
+/*
+   Cuando pasamos el mouse
+   sobre "Menú", mostramos
+   el submenú.
+*/
+.menu-dropdown:hover .submenu {
+  display: block;
+}
+
+
+/* ============================= */
+/* OPCIONES DEL SUBMENÚ */
+/* ============================= */
+
+.menu-dropdown .submenu a {
+  display: block;
+
+  width: 100%;
+
+  padding: 12px 18px;
+
+  box-sizing: border-box;
+
+  color: #222222;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+}
+
+
+/* Hover de Sushi y Comida China */
+.menu-dropdown .submenu a:hover {
+  background-color: #f2f2f2;
+
+  color: #605DC8;
+}

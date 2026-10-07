@@ -1,0 +1,69 @@
+<section class="menu-sushi">
+
+  <!-- Encabezado -->
+  <div class="menu-sushi-header">
+
+    <p class="menu-sushi-subtitle">
+      STICK'S SUSHI
+    </p>
+
+    <h1>
+      Nuestro Menú de Sushi
+    </h1>
+
+    <p class="menu-sushi-description">
+      Descubre nuestra variedad de rollos y especialidades,
+      preparados con ingredientes frescos y de la mejor calidad.
+    </p>
+
+  </div>
+
+  <!-- Platillos -->
+  <!-- <div class="sushi-grid">
+
+    @for (sushi of sushis; track sushi.nombre) {
+
+      <app-cardplatillo
+        [platillo]="sushi"
+      />
+
+    }
+        </div>   -->
+
+    <!-- platillos de sushi -->
+ 
+@for (categoria of categorias; track categoria.nombre) {
+
+  <section>
+
+    <h2>{{ categoria.nombre }}</h2>
+
+    <div class="sushi-grid">
+
+      @for (platillo of categoria.platillos; track platillo.nombre) {
+
+        <app-cardplatillo
+          [platillo]="platillo"
+        />
+
+      }
+
+    </div>
+
+  </section>
+}
+
+  <!-- Información de contacto -->
+  <div class="menu-sushi-footer">
+
+    <p>
+      📍 Melchor Ocampo, Mocorito
+    </p>
+
+    <p>
+      📞 Pedidos al: 697 117 0704
+    </p>
+
+  </div>
+
+</section>

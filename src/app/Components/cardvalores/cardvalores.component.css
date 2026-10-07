@@ -1,0 +1,303 @@
+/* =====================================================
+   TARJETA DE VALORES
+   ===================================================== */
+
+.valores-card {
+
+  /* Ocupa todo el ancho disponible */
+  width: 100%;
+
+  /* Altura mínima de la tarjeta */
+  min-height: 500px;
+
+  /* Coloca información e imagen horizontalmente */
+  display: flex;
+
+  /* Dirección horizontal */
+  flex-direction: row;
+
+  /* Fondo blanco */
+  background-color: #ffffff;
+
+  /* Oculta lo que salga de la tarjeta */
+  overflow: hidden;
+
+  /* Sombra */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+
+  /* Margen superior e inferior */
+  margin: 50px 0;
+
+  /* Animación */
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO DE LA TARJETA
+   ===================================================== */
+
+.valores-card:hover {
+
+  /* La tarjeta sube ligeramente */
+  transform: translateY(-5px);
+
+  /* Aumenta la sombra */
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================================
+   INFORMACIÓN
+   ===================================================== */
+
+.valores-info {
+
+  /* Ocupa la mitad de la tarjeta */
+  width: 50%;
+
+  /* Espacio interno */
+  padding: 60px;
+
+  /* El padding queda incluido dentro del ancho */
+  box-sizing: border-box;
+
+  /* Flexbox */
+  display: flex;
+
+  /* Elementos uno debajo del otro */
+  flex-direction: column;
+
+  /* Centra verticalmente */
+  justify-content: center;
+
+  /* Alinea a la izquierda */
+  align-items: flex-start;
+
+  /* Fondo ligeramente cálido */
+  background-color: #faf9f6;
+}
+
+
+/* =====================================================
+   SUBTÍTULO
+   ===================================================== */
+
+.valores-subtitulo {
+
+  /* Tamaño pequeño */
+  font-size: 13px;
+
+  /* Espacio entre letras */
+  letter-spacing: 3px;
+
+  /* Grosor */
+  font-weight: 600;
+
+  /* Color */
+  color: #8b6f47;
+
+  /* Espacio inferior */
+  margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.valores-info h2 {
+
+  /* Quita márgenes predeterminados */
+  margin: 0;
+
+  /* Tamaño del título */
+  font-size: 38px;
+
+  /* Grosor */
+  font-weight: 600;
+
+  /* Color */
+  color: #222222;
+}
+
+
+/* =====================================================
+   LÍNEA DECORATIVA
+   ===================================================== */
+
+.linea {
+
+  /* Ancho de la línea */
+  width: 55px;
+
+  /* Altura */
+  height: 3px;
+
+  /* Color */
+  background-color: #8b6f47;
+
+  /* Espacio arriba y abajo */
+  margin: 20px 0 25px;
+}
+
+
+/* =====================================================
+   LISTA
+   ===================================================== */
+
+.valores-info ul {
+
+  /* Quita el margen predeterminado */
+  margin: 0;
+
+  /* Quita el padding predeterminado */
+  padding: 0;
+
+  /* Quita las viñetas originales */
+  list-style: none;
+
+  /* Ancho completo */
+  width: 100%;
+}
+
+
+/* =====================================================
+   CADA VALOR
+   ===================================================== */
+
+.valores-info li {
+
+  /* Espacio interno */
+  padding: 12px 0;
+
+  /* Línea debajo de cada valor */
+  border-bottom: 1px solid #e5e5e5;
+
+  /* Tamaño del texto */
+  font-size: 17px;
+
+  /* Color */
+  color: #444444;
+
+  /* Animación */
+  transition: padding-left 0.3s ease;
+}
+
+
+/* =====================================================
+   ICONO ANTES DE CADA VALOR
+   ===================================================== */
+
+.valores-info li::before {
+
+  /* Símbolo decorativo */
+  content: "✦";
+
+  /* Espacio después del símbolo */
+  margin-right: 12px;
+
+  /* Color */
+  color: #8b6f47;
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL MOUSE
+   ===================================================== */
+
+.valores-info li:hover {
+
+  /* Mueve ligeramente el texto hacia la derecha */
+  padding-left: 8px;
+}
+
+
+/* =====================================================
+   IMAGEN
+   ===================================================== */
+
+.valores-imagen {
+
+  /* Ocupa la otra mitad */
+  width: 50%;
+
+  /* Evita que se reduzca */
+  flex-shrink: 0;
+
+  /* Oculta cualquier parte que sobresalga */
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   IMAGEN INTERNA
+   ===================================================== */
+
+.valores-imagen img {
+
+  /* Ocupa todo el ancho */
+  width: 100%;
+
+  /* Ocupa toda la altura */
+  height: 100%;
+
+  /* La imagen llena completamente su espacio */
+  object-fit: cover;
+
+  /* Animación */
+  transition: transform 0.6s ease;
+}
+
+
+/* =====================================================
+   ZOOM DE LA IMAGEN
+   ===================================================== */
+
+.valores-card:hover .valores-imagen img {
+
+  /* Hace un pequeño zoom */
+  transform: scale(1.05);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .valores-card {
+
+    /* Cambia a formato vertical */
+    flex-direction: column;
+  }
+
+
+  .valores-info {
+
+    /* Ocupa todo el ancho */
+    width: 100%;
+
+    /* Reduce el espacio interno */
+    padding: 40px 25px;
+  }
+
+
+  .valores-imagen {
+
+    /* Ocupa todo el ancho */
+    width: 100%;
+
+    /* Altura de la imagen */
+    height: 300px;
+  }
+
+
+  .valores-info h2 {
+
+    /* Título más pequeño */
+    font-size: 30px;
+  }
+}

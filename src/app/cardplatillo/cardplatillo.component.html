@@ -1,0 +1,24 @@
+<article class="platillo-card">
+
+  <img
+    [src]="platillo().imagen"
+    [alt]="platillo().nombre"
+  >
+
+  <div class="platillo-info">
+
+    <h2>
+      {{ platillo().nombre }}
+    </h2>
+
+    <p>
+      {{ platillo().descripcion }}
+    </p>
+
+    <span>
+      ${{ platillo().precio }}
+    </span>
+
+  </div>
+
+</article>
