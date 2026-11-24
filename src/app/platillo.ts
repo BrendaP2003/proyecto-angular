@@ -3,5 +3,12 @@ export interface Platillo {
   imagen: string;
   descripcion: string;
   precio: number;
+  tipo: string;
   categoria: string;
+}
+
+
+export interface CategoriaPlatillos {
+  nombre: string;
+  platillos: Platillo[];
 }

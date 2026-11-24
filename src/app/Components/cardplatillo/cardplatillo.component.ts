@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { Platillo } from '../platillo';
+import { Platillo } from '../../platillo';
 
 @Component({
   selector: 'app-cardplatillo',
