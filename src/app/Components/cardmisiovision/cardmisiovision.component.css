@@ -1,0 +1,202 @@
+/* =====================================================
+   TARJETA MISIÓN / VISIÓN
+   ===================================================== */
+
+.mision-vision-card {
+
+  /* Ocupa todo el ancho disponible */
+  width: 100%;
+
+  /* Altura mínima */
+  min-height: 320px;
+
+  /* Fondo de la tarjeta */
+  background-color: #faf9f6;
+
+  /* Borde */
+  border: 1px solid #e8e5df;
+
+  /* Esquinas redondeadas */
+  border-radius: 16px;
+
+  /* Incluye el borde dentro del ancho */
+  box-sizing: border-box;
+
+  /* Oculta cualquier elemento que sobresalga */
+  overflow: hidden;
+
+  /* Sombra suave */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+  /* Animación */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL MOUSE
+   ===================================================== */
+
+.mision-vision-card:hover {
+
+  /* Mueve la tarjeta ligeramente hacia arriba */
+  transform: translateY(-6px);
+
+  /* Hace más visible la sombra */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   CONTENIDO
+   ===================================================== */
+
+.mision-vision-info {
+
+  /* Ocupa todo el ancho */
+  width: 100%;
+
+  /* Espacio interno */
+  padding: 50px 45px;
+
+  /* Incluye padding dentro del ancho */
+  box-sizing: border-box;
+
+  /* Flexbox */
+  display: flex;
+
+  /* Elementos uno debajo del otro */
+  flex-direction: column;
+
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+
+  /* Centra el contenido verticalmente */
+  justify-content: center;
+
+  /* Texto centrado */
+  text-align: center;
+}
+
+
+/* =====================================================
+   SUBTÍTULO
+   ===================================================== */
+
+.mision-vision-subtitulo {
+
+  /* Tamaño pequeño */
+  font-size: 12px;
+
+  /* Espacio entre letras */
+  letter-spacing: 3px;
+
+  /* Grosor */
+  font-weight: 600;
+
+  /* Color */
+  color: #8b6f47;
+
+  /* Espacio debajo */
+  margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.mision-vision-info h2 {
+
+  /* Quita márgenes */
+  margin: 0;
+
+  /* Tamaño del título */
+  font-size: 36px;
+
+  /* Grosor */
+  font-weight: 600;
+
+  /* Color */
+  color: #222222;
+}
+
+
+/* =====================================================
+   LÍNEA DECORATIVA
+   ===================================================== */
+
+.mision-vision-linea {
+
+  /* Ancho de la línea */
+  width: 50px;
+
+  /* Altura */
+  height: 3px;
+
+  /* Color */
+  background-color: #8b6f47;
+
+  /* Espacio arriba y abajo */
+  margin: 20px 0 25px;
+}
+
+
+/* =====================================================
+   TEXTO
+   ===================================================== */
+
+.mision-vision-info p {
+
+  /* Quita márgenes */
+  margin: 0;
+
+  /* Ancho máximo para facilitar la lectura */
+  max-width: 500px;
+
+  /* Tamaño de letra */
+  font-size: 17px;
+
+  /* Espacio entre líneas */
+  line-height: 1.8;
+
+  /* Color */
+  color: #555555;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .mision-vision-card {
+
+    /* Altura automática */
+    min-height: auto;
+  }
+
+
+  .mision-vision-info {
+
+    /* Menos espacio en celular */
+    padding: 40px 25px;
+  }
+
+
+  .mision-vision-info h2 {
+
+    /* Título más pequeño */
+    font-size: 30px;
+  }
+
+
+  .mision-vision-info p {
+
+    /* Texto ligeramente más pequeño */
+    font-size: 16px;
+  }
+}

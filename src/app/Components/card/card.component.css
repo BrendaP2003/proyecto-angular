@@ -1,0 +1,82 @@
+
+/* Contenedor principal de cada tarjeta */
+.restaurant-card {
+
+  /* Hace que la tarjeta ocupe todo el ancho disponible */
+  width: 100%;
+
+  /* Define la altura de la tarjeta */
+  height: 500px;
+
+  /* Permite colocar la imagen y la información una junto a la otra */
+  display: flex;
+
+  /* Elimina el margen exterior */
+  margin: 0;
+
+  /* Elimina el espacio interior */
+  padding: 0;
+
+  /* Elimina específicamente el margen superior */
+  margin-top: 0;
+
+  /* Oculta cualquier contenido que se salga de los límites de la tarjeta */
+  overflow: hidden;
+
+  /* Puedes usarlo temporalmente para visualizar el tamaño de la tarjeta */
+  /* background-color: red; */
+}
+
+
+/* Se aplica cuando la tarjeta tiene la clase "invertida" */
+.restaurant-card.invertida {
+
+  /* Invierte el orden de los elementos:
+     información | imagen */
+  flex-direction: row-reverse;
+}
+
+
+/* Imagen que está dentro de la tarjeta */
+.restaurant-card img {
+
+  /* La imagen ocupa la mitad del ancho de la tarjeta */
+  width: 50%;
+
+  /* La imagen ocupa toda la altura de la tarjeta */
+  height: 500px;
+
+  /* Hace que la imagen llene su espacio sin deformarse */
+  object-fit: cover;
+
+  /* Evita espacios extra que pueden aparecer debajo de una imagen */
+  display: block;
+}
+
+
+/* Contenedor donde está la información del restaurante */
+.restaurant-info {
+
+  /* La información ocupa la mitad del ancho */
+  width: 50%;
+
+  /* La información ocupa toda la altura */
+  height: 500px;
+
+  /* Permite organizar el contenido utilizando Flexbox */
+  display: flex;
+
+  /* Coloca los elementos uno debajo de otro */
+  flex-direction: column;
+
+  /* Centra verticalmente el contenido */
+  justify-content: center;
+
+  /* Agrega espacio entre el contenido y los bordes */
+  padding: 40px;
+
+  /* Hace que el padding se incluya dentro del width y height */
+  box-sizing: border-box;
+}
+
+

@@ -1,0 +1,27 @@
+<article class="contact-card">
+
+  @if (icono()) {
+    <img
+      class="contact-icon"
+      [src]="icono()"
+      [alt]="titulo()"
+    >
+  }
+
+  <h2>{{ titulo() }}</h2>
+
+  <p>{{ texto() }}</p>
+
+  @if (enlace()) {
+
+    <a
+      [href]="enlace()"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {{ textoEnlace() }}
+    </a>
+
+  }
+
+</article>

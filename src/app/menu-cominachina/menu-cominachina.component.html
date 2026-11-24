@@ -1,0 +1,61 @@
+
+<section class="menu-cchina">
+
+  <!-- Encabezado -->
+  <div class="menu-cchina-header">
+
+    <p class="menu-cchina-subtitle">
+      STICK'S SUSHI
+    </p>
+
+    <h1>
+      Nuestro Menú de comida china
+    </h1>
+
+    <p class="menu-cchina-description">
+      Descubre nuestra variedad de platillos,
+      preparados con ingredientes frescos y de la mejor calidad.
+    </p>
+
+  </div>
+
+  
+  <!-- Categorías y platillos -->
+@for (categoria of comidachina; track categoria.nombre) {
+
+  <section>
+
+    <!-- Nombre de la categoría -->
+    <h2>{{ categoria.nombre }}</h2>
+
+    <div class="cchina-grid">
+
+      <!-- Recorrer los platillos de cada categoría -->
+      @for (pchino of categoria.platillos; track pchino.nombre) {
+
+        <app-cardplatillo
+          [platillo]="pchino"
+        />
+
+      }
+
+    </div>
+
+  </section>
+}
+
+  <!-- Información de contacto -->
+  <div class="menu-cchina-footer">
+
+    <p>
+      📍 Melchor Ocampo, Mocorito
+    </p>
+
+    <p>
+      📞 Pedidos al: 697 117 0704
+    </p>
+
+  </div>
+
+</section>
+

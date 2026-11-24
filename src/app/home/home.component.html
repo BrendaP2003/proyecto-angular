@@ -1,5 +1,5 @@
 <!-- <h2>home works!</h2> -->
-<section>
+<!-- <section>
   <form>
     <input type="text" placeholder="Filter by city" />
 
@@ -7,16 +7,25 @@
       Search
     </button>
   </form>
-</section>
-<section class="results">
+</section> -->
 
+<section class="franquicias">
+
+<app-promo-card-component
+  titulo="PROMOSION SUSHIS"
+  imagen='/access/Group1.svg' 
+  texto="Únete a nuestra historia de crecimiento. Conoce nuestros distintos modelos de franquicia, contáctanos y descubre el proyecto de inversión ideal para ti."
+  textoBoton="Conoce nuestras franquicias">
+</app-promo-card-component>
+
+</section>
+
+<section class="results">
   @for (restaurante of restaurantes; track restaurante.nombre; let i = $index) {
 
   <app-card
-    [nombre]="restaurante.nombre"
-    [imagen]="restaurante.imagen"
-    [tipo]="restaurante.tipo"
-    [ciudad]="restaurante.ciudad"
+  
+    [restaurante] = "restaurante"
     [invertida]="i % 2 === 1">
   </app-card>
 

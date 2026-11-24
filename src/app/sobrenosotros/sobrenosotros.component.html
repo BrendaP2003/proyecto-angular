@@ -1,0 +1,45 @@
+
+<section class="sobre-nosotros">
+
+  <app-cardinfhistoria
+    titulo="Nuestra Historia"
+    imagen="/access/restaurante3.webp"
+    texto="Aquí irá el texto de nuestra historia."
+  ></app-cardinfhistoria>
+
+</section>
+
+
+<section class="valores">
+    <app-cardvalores
+    titulo="Nuestros Valores"
+    imagen="/access/valores.jpg"
+    [valores]="[
+        'Responsabilidad',
+        'Honestidad',
+        'Respeto',
+        'Trabajo en equipo',
+        'Compromiso'
+    ]"
+    ></app-cardvalores>
+ 
+</section>
+<section class="mision-vision">
+
+  <h1>Misión y Visión</h1>
+
+  <div class="mision-vision-container">
+
+    <app-cardmisiovision
+      titulo="Misión"
+      texto="Brindar productos y servicios de calidad, buscando satisfacer las necesidades de nuestros clientes."
+    ></app-cardmisiovision>
+
+    <app-cardmisiovision
+      titulo="Visión"
+      texto="Ser una empresa reconocida por la calidad de nuestros productos y el compromiso con nuestros clientes."
+    ></app-cardmisiovision>
+
+  </div>
+
+</section>

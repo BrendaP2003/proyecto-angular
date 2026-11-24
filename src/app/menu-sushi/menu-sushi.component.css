@@ -1,0 +1,181 @@
+/* ========================================
+   CONTENEDOR PRINCIPAL
+======================================== */
+
+.menu-sushi {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 70px 40px;
+
+  box-sizing: border-box;
+
+  background-color: #fafafa;
+}
+
+
+/* ========================================
+   ENCABEZADO
+======================================== */
+
+.menu-sushi-header {
+  max-width: 750px;
+
+  margin: 0 auto 60px;
+
+  text-align: center;
+}
+
+
+/* Nombre del restaurante */
+
+.menu-sushi-subtitle {
+  margin: 0 0 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+
+/* Título */
+
+.menu-sushi-header h1 {
+  margin: 0 0 20px;
+
+  font-size: 46px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+/* Descripción */
+
+.menu-sushi-description {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #666;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   GRID DE PLATILLOS
+======================================== */
+
+.sushi-grid {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+
+/* ========================================
+   INFORMACIÓN FINAL
+======================================== */
+
+.menu-sushi-footer {
+  max-width: 1200px;
+
+  margin: 70px auto 0;
+
+  padding-top: 30px;
+
+  border-top: 1px solid #dddddd;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 50px;
+
+  flex-wrap: wrap;
+
+  text-align: center;
+}
+
+
+.menu-sushi-footer p {
+  margin: 0;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .menu-sushi {
+    padding: 60px 25px;
+  }
+
+  .sushi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-sushi-header h1 {
+    font-size: 38px;
+  }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+  .menu-sushi {
+    padding: 45px 20px;
+  }
+
+  .menu-sushi-header {
+    margin-bottom: 40px;
+  }
+
+  .menu-sushi-header h1 {
+    font-size: 32px;
+  }
+
+  .menu-sushi-description {
+    font-size: 15px;
+  }
+
+  .sushi-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .menu-sushi-footer {
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+}

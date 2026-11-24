@@ -1,0 +1,98 @@
+/* =====================================================
+   CONTENEDOR DE LAS TARJETAS
+   ===================================================== */
+
+.contacto-container {
+  width: 100%;
+
+  /* Coloca las tarjetas en una fila */
+  display: flex;
+
+  /* Las tarjetas se mantienen en la misma fila */
+  flex-direction: row;
+
+  /* Espacio entre las tarjetas */
+  gap: 80px;
+}
+
+
+/* =====================================================
+   CADA TARJETA DENTRO DEL CONTENEDOR
+   ===================================================== */
+
+.contacto-container app-contact-card {
+
+  /* Hace que todas las tarjetas tengan
+     el mismo espacio disponible */
+  flex: 1;
+}
+/* Contenedor de la sección del formulario */
+.formulario-contacto {
+  /* Hace que el contenido ocupe todo el ancho */
+  width: 100%;
+
+  /* Centra los elementos dentro de la sección */
+  text-align: center;
+
+  /* Espacio arriba y abajo */
+  padding: 60px 20px;
+
+  /* Evita problemas con el ancho */
+  box-sizing: border-box;
+}
+
+
+/* Título de la sección */
+.formulario-contacto h2 {
+  /* Centra el título */
+  text-align: center;
+
+  /* Tamaño del título */
+  font-size: 32px;
+
+  /* Grosor del título */
+  font-weight: 600;
+
+  /* Quita el margen superior */
+  margin-top: 0;
+
+  /* Espacio debajo del título */
+  margin-bottom: 10px;
+}
+
+/* Título de la sección */
+.contacto h2 {
+  /* Centra el título */
+  text-align: center;
+
+  /* Tamaño del título */
+  font-size: 32px;
+
+  /* Grosor del título */
+  font-weight: 600;
+
+  /* Quita el margen superior */
+  margin-top: 20px;
+
+  /* Espacio debajo del título */
+  margin-bottom: 10px;
+}
+
+
+/* Texto debajo del título */
+.formulario-contacto p {
+  /* Centra el texto */
+  text-align: center;
+
+  /* Tamaño del texto */
+  font-size: 16px;
+
+  /* Color del texto */
+  color: #666666;
+
+  /* Espacio debajo */
+  margin-top: 0;
+
+  /* Espacio antes del formulario */
+  margin-bottom: 35px;
+}

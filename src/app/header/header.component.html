@@ -1,29 +1,70 @@
 
 <header class="brand-name">
-  
+
   <div class="brand">
-  
-  <nav>
 
-        @for (item of menu; track item.ruta) {
+    <nav>
 
-        <a [routerLink]="item.ruta">
+      @for (item of menu; track item.ruta) {
+
+        @if (item.nombre === 'Menú') {
+
+          <!-- Menú principal con opciones -->
+          <div class="menu-dropdown">
+
+            <a [routerLink]="item.ruta">
+
+              <img
+                class="brand-logo"
+                [src]="item.icono"
+                [alt]="item.nombre"
+              />
+
+              <span>
+                {{ item.nombre }}
+              </span>
+
+            </a>
+
+
+            <!-- Opciones que aparecen debajo de Menú -->
+            <div class="submenu">
+
+              <a routerLink="/menu/sushi">
+                Sushi
+              </a>
+
+              <a routerLink="/menu/comida-china">
+                Comida China
+              </a>
+
+            </div>
+
+          </div>
+
+        } @else {
+
+          <!-- Los demás elementos del Header -->
+          <a [routerLink]="item.ruta">
 
             <img
-            class="brand-logo"
-            [src]="item.icono"
-            [alt]="item.nombre"
+              class="brand-logo"
+              [src]="item.icono"
+              [alt]="item.nombre"
             />
 
             <span>
-            {{ item.nombre }}
+              {{ item.nombre }}
             </span>
 
-        </a>
+          </a>
 
         }
 
+      }
+
     </nav>
+
   </div>
 
 </header>

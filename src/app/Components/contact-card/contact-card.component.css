@@ -1,0 +1,138 @@
+.contact-card {
+  /* Ocupa todo el ancho disponible */
+  width: 100%;
+
+  /* Altura mínima de la tarjeta */
+  min-height: 250px;
+
+  /* Espacio interno entre el contenido y los bordes */
+  padding: 40px 30px;
+
+  /* Hace que el contenido se acomode usando Flexbox */
+  display: flex;
+
+  /* Coloca los elementos uno debajo del otro */
+  flex-direction: column;
+
+  /* Centra los elementos horizontalmente */
+  align-items: center;
+
+  /* Centra los elementos verticalmente */
+  justify-content: center;
+
+  /* Centra el texto */
+  text-align: center;
+
+  /* Color de fondo de la tarjeta */
+  background-color: #ffffff;
+
+  /* Borde de la tarjeta */
+  border: 1px solid #eeeeee;
+
+  /* Redondea las esquinas */
+  border-radius: 12px;
+
+  /* Hace que los cambios visuales sean suaves */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL MOUSE
+   ===================================================== */
+
+.contact-card:hover {
+
+  /* Mueve la tarjeta 5px hacia arriba */
+  transform: translateY(-5px);
+
+  /* Agrega una sombra alrededor de la tarjeta */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   ICONO
+   ===================================================== */
+
+.contact-icon {
+
+  /* Ancho del icono */
+  width: 55px;
+
+  /* Alto del icono */
+  height: 55px;
+
+  /* Evita que la imagen se deforme */
+  object-fit: contain;
+
+  /* Espacio debajo del icono */
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.contact-card h2 {
+
+  /* Elimina el margen superior */
+  margin: 0 0 15px;
+
+  /* Tamaño de la letra */
+  font-size: 24px;
+
+  /* Grosor de la letra */
+  font-weight: 600;
+}
+
+
+/* =====================================================
+   DESCRIPCIÓN
+   ===================================================== */
+
+.contact-card p {
+
+  /* Elimina el margen superior
+     y deja 20px abajo */
+  margin: 0 0 20px;
+
+  /* Evita que el texto sea demasiado ancho */
+  max-width: 300px;
+
+  /* Tamaño de la letra */
+  font-size: 16px;
+
+  /* Espacio entre cada línea */
+  line-height: 1.6;
+}
+
+
+/* =====================================================
+   ENLACE
+   ===================================================== */
+
+.contact-card a {
+
+  /* Quita la línea que normalmente aparece debajo */
+  text-decoration: none;
+
+  /* Hace que el texto del enlace sea más grueso */
+  font-weight: 600;
+
+  /* Hace suave el cambio al pasar el mouse */
+  transition: opacity 0.3s ease;
+}
+
+
+/* =====================================================
+   EFECTO DEL ENLACE AL PASAR EL MOUSE
+   ===================================================== */
+
+
+/* Cuando pasamos el mouse sobre la tarjeta */
+.contact-card:hover {
+  /* Agrega solamente una sombra */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}

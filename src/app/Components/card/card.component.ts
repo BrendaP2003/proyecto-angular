@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, input, } from '@angular/core';
+import { Restaurante } from '../../restaurante';
 @Component({
   selector: 'app-card',
   standalone: true,
@@ -9,11 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class CardComponent {
   
-  @Input() nombre = '';
-  @Input() imagen = '';
-  @Input() tipo = '';
-  @Input() ciudad = '';
-  @Input() invertida = false;
+restaurante = input.required<Restaurante>();
+ invertida = input(false);
 
 
 }

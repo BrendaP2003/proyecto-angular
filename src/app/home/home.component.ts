@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { CardComponent } from '../card/card.component';
+import { CardComponent } from '../Components/card/card.component';
 import { Restaurante } from '../restaurante';
+import { PromoCardComponentComponent } from '../Components/promo-card-component/promo-card-component.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ CardComponent],
+  imports: [ CardComponent, PromoCardComponentComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

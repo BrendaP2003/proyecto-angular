@@ -1,0 +1,204 @@
+/* =====================================================
+   TARJETA DE HISTORIA
+   ===================================================== */
+
+.historia-card {
+
+  /* Ocupa todo el ancho disponible */
+  width: 100%;
+
+  /* Altura de la tarjeta */
+  min-height: 450px;
+
+  /* Coloca la imagen y el contenido uno al lado del otro */
+  display: flex;
+
+  /* Dirección horizontal */
+  flex-direction: row;
+
+  /* Fondo blanco */
+  background-color: #ffffff;
+
+  /* Esquinas ligeramente redondeadas */
+  border-radius: 16px;
+
+  /* Oculta cualquier parte de la imagen que sobresalga */
+  overflow: hidden;
+
+  /* Sombra suave */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+  /* Espacio exterior */
+  margin: 40px 0;
+}
+
+
+/* =====================================================
+   IMAGEN
+   ===================================================== */
+
+.historia-card img {
+
+  /* La imagen ocupa la mitad de la tarjeta */
+  width: 50%;
+
+  /* La imagen ocupa toda la altura */
+  height: 450px;
+
+  /* Hace que la imagen cubra completamente su espacio */
+  object-fit: cover;
+
+  /* Evita que la imagen se reduzca */
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   CONTENIDO
+   ===================================================== */
+
+.historia-info {
+
+  /* El contenido ocupa la otra mitad */
+  width: 50%;
+
+  /* Espacio interno */
+  padding: 50px;
+
+  /* Incluye el padding dentro del ancho */
+  box-sizing: border-box;
+
+  /* Utilizamos flexbox */
+  display: flex;
+
+  /* Coloca título y párrafo verticalmente */
+  flex-direction: column;
+
+  /* Centra verticalmente el contenido */
+  justify-content: center;
+
+  /* Centra horizontalmente */
+  align-items: center;
+
+  /* Texto centrado */
+  text-align: center;
+}
+
+
+/* =====================================================
+   TÍTULO
+   ===================================================== */
+
+.historia-info h2 {
+
+  /* Quita el margen superior */
+  margin-top: 0;
+
+  /* Espacio debajo del título */
+  margin-bottom: 20px;
+
+  /* Tamaño del título */
+  font-size: 36px;
+
+  /* Grosor del título */
+  font-weight: 600;
+
+  /* Color */
+  color: #222222;
+}
+
+
+/* =====================================================
+   PÁRRAFO
+   ===================================================== */
+
+.historia-info p {
+
+  /* Quita márgenes innecesarios */
+  margin: 0;
+
+  /* Limita el ancho para facilitar la lectura */
+  max-width: 500px;
+
+  /* Tamaño del texto */
+  font-size: 17px;
+
+  /* Espacio entre líneas */
+  line-height: 1.8;
+
+  /* Color del texto */
+  color: #555555;
+}
+
+
+/* =====================================================
+   EFECTO AL PASAR EL MOUSE
+   ===================================================== */
+
+.historia-card {
+
+  /* Hace que el movimiento sea suave */
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+
+.historia-card:hover {
+
+  /* La tarjeta sube ligeramente */
+  transform: translateY(-5px);
+
+  /* La sombra aumenta */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  .historia-card {
+
+    /* En celular cambia a formato vertical */
+    flex-direction: column;
+
+    /* Altura automática */
+    min-height: auto;
+  }
+
+
+  .historia-card img {
+
+    /* La imagen ocupa todo el ancho */
+    width: 100%;
+
+    /* Altura de la imagen en celular */
+    height: 300px;
+  }
+
+
+  .historia-info {
+
+    /* El contenido ocupa todo el ancho */
+    width: 100%;
+
+    /* Reducimos el espacio interno */
+    padding: 35px 25px;
+  }
+
+
+  .historia-info h2 {
+
+    /* Título más pequeño en celular */
+    font-size: 28px;
+  }
+
+
+  .historia-info p {
+
+    /* Texto un poco más pequeño */
+    font-size: 16px;
+  }
+}

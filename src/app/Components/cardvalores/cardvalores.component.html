@@ -1,0 +1,31 @@
+<article class="valores-card">
+
+  <div class="valores-info">
+
+    <span class="valores-subtitulo">
+      LO QUE NOS REPRESENTA
+    </span>
+
+    <h2>{{ titulo() }}</h2>
+
+    <div class="linea"></div>
+
+    <ul>
+      @for (valor of valores(); track valor) {
+        <li>{{ valor }}</li>
+      }
+    </ul>
+
+  </div>
+
+
+  <div class="valores-imagen">
+
+    <img
+      src="/access/valores.jpg"
+      alt="Nuestros valores"
+    >
+
+  </div>
+
+</article>
